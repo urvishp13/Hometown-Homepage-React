@@ -1,0 +1,163 @@
+:root {
+  --clr-main: #1D3557;
+  --subtitle: #457B9D;
+  --guide-card: #A8DADC;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  text-align: center;
+  color: var(--clr-main);
+  background-color: #D1EEFE;
+}
+
+.container {
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+/* ///////// HERO SECTION ////////////// */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.44em 0;
+  background-image: url("/images/torshov.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #FFF;
+}
+
+.hero-section__title,
+.hero-section__subtitle {
+  width: fit-content;
+  border-radius: 0.625rem;
+}
+
+.hero-section__title {
+  font-size: 2em;
+  padding: .155em .375em;
+  background-color: var(--clr-main);
+}
+
+.hero-section__subtitle {
+  font-size: 1.17em;
+  max-width: 25.75rem;
+  padding: .43em 1.55em;
+  margin-top: .59em;
+  background-color: var(--subtitle);
+}
+
+/* ///////// ACTIVITIES SECTION ////////// */
+
+.activities-section {
+  padding: 2.38em 2.12em;
+  background-color: #F1FAEE;
+}
+
+.activities-section__title {
+  font-size: 1.5em;
+  margin-bottom: 2.25em;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  gap: 2.06rem;
+}
+
+.activity {
+  width: 12.375rem;
+}
+
+.activity__img {
+  width: 6.25rem;
+  border-radius: 50%;
+}
+
+.activity__title {
+  margin-top: 1.42em;
+}
+
+.activity__desc {
+  margin-top: 1.06em;
+}
+
+/* ////////// GUIDE SECTION //////////// */
+
+.guide-section {
+  display: flex;
+  justify-content: center;
+  padding: 3.13em 10em;
+  background-color: #FFF;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 11.8125rem;
+  grid-template-areas: 
+    "pic title"
+    "pic quote"
+    "pic name";
+  column-gap: .44rem;
+  max-width: 25rem;
+  padding: 1.44em .81em;
+  background-color: var(--guide-card);
+  border-radius: 0.625rem;
+  box-shadow: 0px 6px 0px 0px var(--clr-main);
+}
+
+.card__img {
+  grid-area: pic;
+  width: 11.25rem;
+  border-radius: 0.625rem;
+}
+
+.card__title {
+  align-self: end;
+  font-size: 1.5em;
+}
+
+.card__quote {
+  align-self: center;
+}
+
+/* //////// MEDIA QUERIES //////////// */
+
+@media (max-width: 596px) {
+
+  .activities {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .card__img {
+    width: 5rem;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__title,
+  .card__name {
+    margin: .5em 0;
+  }
+
+}
